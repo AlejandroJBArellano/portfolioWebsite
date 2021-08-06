@@ -1,0 +1,75 @@
+body{
+    user-select: none;
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    &::-webkit-scrollbar:vertical {
+        width:10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #9b9b9b;
+        border-radius: 20px;
+        border: 2px solid #f1f2f3;
+    }
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;  
+    }
+    #root{
+        .container{
+            nav{
+                display: block;
+                text-align: center;
+                ul{
+                    list-style: none;
+                    padding: 0;
+                    li{
+                        display: inline;
+                        a,a:visited{
+                            text-decoration: none;
+                            display: inline;
+                            margin: 10px;
+                            transition: all .5s ease-in-out;
+                            padding: 10px;
+                            &:hover{
+                                background-color: rgba(134, 128, 128, 0.568);
+                                border-radius: 10px;
+                                color: rgb(255, 0, 0);
+                            }
+                        }
+                    }
+                }
+            }
+            main{
+                display: grid;
+                place-items: center;
+                height: 100vh;
+                h1{text-align: center;}
+                section{
+                    display:grid;
+                    width: 70%;
+                    grid-template-rows: 1fr;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    margin: auto;
+                    figure{
+                        display: flex;
+                        place-items: center;
+                        justify-content: space-around;
+                        margin: 10px;
+                        width: 200px;
+                        img{
+                            width: 100%;
+                        }
+                        figcaption{
+                            display: inline-block;
+                            user-select: none;
+                        }
+                        transition: all .6s ease-in-out;
+                        &:hover{
+                            transform: scale(1.4);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
